@@ -1,0 +1,45 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Breakfast Roll Recipes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/profiles.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="row">
+            <div class="span12" id="profiles">
+                Loading...
+            </div>
+        </div>
+    </div>
+
+    <script type="text/x-mustache-template" id="index-template">
+        <h2>There are {{ count }} matching profiles</h2>
+        <div class="profiles"></div>
+    </script>
+
+    <script type="text/x-mustache-template" id="profile-template">
+        <a>{{ firstName }} {{ lastName }}</a>
+        <p>{{ email }}</p>
+        <ul class="publications"></ul>
+    </script>
+
+    <script src="../../Scripts/jquery.js"></script>
+    <script src="../../Scripts/bootstrap.js"></script>
+    <script src="../../Scripts/underscore.js"></script>
+    <script src="../../Scripts/backbone.js"></script>
+    <script src="../../Scripts/mustache.js"></script>
+    <script src="../../Scripts/backbone-localstorage.js"></script>
+    <script src="../../Scripts/profiles.js"></script>
+    <script>$(function () { debugger; Profiles.boot($("#profiles")); });</script>
+  </body>
+</html>

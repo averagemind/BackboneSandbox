@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BackboneMVC.Models.Profile>
+
+@{
+    ViewBag.Title = "Professional Profiles";
+}
+@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title</h1>
+            </hgroup>
+        </div>
+    </section>
+}
+<ul class="list-top">
+    @foreach (var p in Model)
+    {
+        <li id="@p.id">
+
+            <a data="modalpopup"><b>@p.firstName @p.lastName</b></a><br />
+            <i>@p.email</i><br />
+            <span>@p.position, @p.organization</span><br />
+
+@*
+            @if (p.JournalArticles != null && p.JournalArticles.Count() > 0)
+            {
+                <ul>
+                    @foreach (var j in p.JournalArticles)
+                    {
+                        <li>
+                            <div><i>@j.Title</i></div>
+                            <div>@j.Journal</div>
+                        </li>
+                    }
+                </ul>
+            }
+*@
+
+        </li>
+    }
+</ul>

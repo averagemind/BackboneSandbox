@@ -1,0 +1,34 @@
+﻿#modalContainer
+{
+    width:600px;
+    height:500px;
+    background-color:#eee ;
+    overflow:visible;
+}
+
+#modalContainer > div
+{
+    padding:25px 50px 50px 50px;
+}
+
+#modalContainer ul
+{
+    padding:0;
+}
+
+#modalContainer ul > li
+{
+    list-style:none;
+    margin-bottom:15px;
+}
+
+#modalContainer ul > li > div
+{
+    font-size:larger;
+}
+
+#modalContainer ul > li > div:last-child
+{
+    font-style:italic;
+    font-weight:500;
+}
